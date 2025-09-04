@@ -21,6 +21,21 @@ Un système intelligent d'extraction de données bancaires qui utilise Skyvern p
 
 Ce projet démontre l'utilisation de **Skyvern** (plateforme d'automatisation web alimentée par l'IA) pour extraire automatiquement des données bancaires réelles à partir de **ParaBank**, un site de démonstration bancaire.
 
+## 🎬 Démonstration Vidéo
+
+https://github.com/user-attachments/assets/votre-video-id-ici
+
+> 📹 **La vidéo montre** : Navigation automatique sur ParaBank, extraction de comptes réels, et récupération des transactions en temps réel avec Skyvern AI.
+
+**🎥 Ce que vous verrez dans la démo :**
+- ✅ Interface Skyvern en action avec votre workflow
+- ✅ Login automatique sur ParaBank via l'IA
+- ✅ Navigation intelligente entre les pages bancaires
+- ✅ Extraction de données en temps réel sans intervention humaine
+- ✅ Résultats structurés JSON générés automatiquement
+
+---
+
 ### 🎭 Problème Résolu
 
 - **Défi** : Extraire automatiquement des données bancaires complexes (comptes, transactions, investissements)
