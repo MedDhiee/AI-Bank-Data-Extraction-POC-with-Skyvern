@@ -1,0 +1,205 @@
+title: Enhanced Bank Data Extraction - Account Details and Transactions
+description: Extract detailed account information and transactions from ParaBank in a systematic way
+proxy_location: RESIDENTIAL
+workflow_definition:
+  parameters:
+    - key: TARGET_URL
+      description: URL of the bank login page
+      parameter_type: workflow
+      workflow_parameter_type: string
+      default_value: "https://parabank.parasoft.com/parabank/index.htm"
+    - key: USERNAME
+      description: Username for bank login
+      parameter_type: workflow
+      workflow_parameter_type: string
+    - key: PASSWORD
+      description: Password for bank login
+      parameter_type: workflow
+      workflow_parameter_type: string
+    - key: TARGET_ACCOUNT
+      description: Specific account number to extract details from (will use first available account if not specified)
+      parameter_type: workflow
+      workflow_parameter_type: string
+      default_value: ""
+  blocks:
+    - label: Login_To_Bank
+      block_type: task
+      continue_on_failure: false
+      url: "{{ TARGET_URL }}"
+      title: Bank Login and Navigation
+      navigation_goal: "Login to ParaBank using provided credentials and navigate to the accounts overview page"
+      data_extraction_goal: "Confirm successful login and extract basic account overview information"
+      data_schema:
+        type: object
+        properties:
+          login_success:
+            type: boolean
+            description: Whether login was successful
+          accounts_overview:
+            type: array
+            description: List of all accounts visible on overview page
+            items:
+              type: object
+              properties:
+                account_number:
+                  type: string
+                balance:
+                  type: string
+          page_status:
+            type: string
+            description: Current page status after login
+      error_code_mapping: null
+      max_retries: 2
+      max_steps_per_run: 15
+      parameter_keys:
+        - USERNAME
+        - PASSWORD
+      complete_on_download: false
+      cache_actions: false
+      complete_criterion: "Successfully logged in and viewing accounts overview page"
+      terminate_criterion: "Stop after reaching accounts overview - do not click on individual accounts yet"
+      engine: skyvern-2.0
+
+    - label: Extract_First_Account_Details
+      block_type: task
+      continue_on_failure: false
+      navigation_goal: "From the accounts overview page, click on the target account ({{ TARGET_ACCOUNT }} if specified, otherwise click on the FIRST account in the list) to view its detailed information. IMPORTANT: Click only once and extract all details from this account's detail page."
+      data_extraction_goal: "Extract comprehensive details of the first account including account type, detailed balance information, interest rates, and any additional account metadata"
+      data_schema:
+        type: object
+        properties:
+          account_details:
+            type: object
+            properties:
+              account_number:
+                type: string
+                description: Account number
+              account_type:
+                type: string
+                description: Type of account (checking, savings, etc.)
+              balance:
+                type: string
+                description: Current balance
+              available_balance:
+                type: string
+                description: Available balance
+              account_name:
+                type: string
+                description: Account name or description
+              opening_date:
+                type: string
+                description: Account opening date if available
+              interest_rate:
+                type: string
+                description: Interest rate if applicable
+              account_status:
+                type: string
+                description: Account status (active, etc.)
+          page_content:
+            type: string
+            description: Key information extracted from account detail page
+          navigation_success:
+            type: boolean
+            description: Whether navigation to account details was successful
+      error_code_mapping: null
+      max_retries: 2
+      max_steps_per_run: 20
+      parameter_keys:
+        - TARGET_ACCOUNT
+      complete_on_download: false
+      cache_actions: false
+      complete_criterion: "Successfully extracted detailed information from the first account"
+      terminate_criterion: "Stop after extracting account details - do not navigate away yet"
+      engine: skyvern-2.0
+
+    - label: Extract_Account_Transactions
+      block_type: task
+      continue_on_failure: false
+      navigation_goal: "From the current account detail page, look for and click on transaction history, activity, or transaction links to view the transaction history for this account"
+      data_extraction_goal: "Extract all available transaction history for the current account including dates, descriptions, amounts, and balances"
+      data_schema:
+        type: object
+        properties:
+          transactions:
+            type: array
+            description: List of all transactions for this account
+            items:
+              type: object
+              properties:
+                date:
+                  type: string
+                  description: Transaction date
+                description:
+                  type: string
+                  description: Transaction description
+                amount:
+                  type: string
+                  description: Transaction amount (positive or negative)
+                balance:
+                  type: string
+                  description: Account balance after transaction
+                transaction_type:
+                  type: string
+                  description: Type of transaction (debit, credit, transfer, etc.)
+                reference_number:
+                  type: string
+                  description: Transaction reference or ID if available
+          transaction_summary:
+            type: object
+            properties:
+              total_transactions:
+                type: integer
+                description: Total number of transactions found
+              date_range:
+                type: string
+                description: Date range of transactions
+              account_number:
+                type: string
+                description: Account number for these transactions
+          extraction_notes:
+            type: string
+            description: Notes about the transaction extraction process
+      error_code_mapping: null
+      max_retries: 2
+      max_steps_per_run: 25
+      complete_on_download: false
+      cache_actions: false
+      complete_criterion: "Successfully extracted transaction history for the account"
+      terminate_criterion: "Stop after extracting all available transactions"
+      engine: skyvern-2.0
+
+    - label: Return_To_Overview_For_Next_Account
+      block_type: task
+      continue_on_failure: false
+      navigation_goal: "Navigate back to the main accounts overview page to prepare for extracting details from other accounts. Look for 'Accounts Overview' or 'Back to Accounts' links."
+      data_extraction_goal: "Confirm successful return to accounts overview and identify the next account to process"
+      data_schema:
+        type: object
+        properties:
+          back_to_overview:
+            type: boolean
+            description: Whether successfully returned to accounts overview
+          next_accounts_available:
+            type: array
+            description: List of remaining accounts that can be processed
+            items:
+              type: object
+              properties:
+                account_number:
+                  type: string
+                balance:
+                  type: string
+          navigation_status:
+            type: string
+            description: Status of navigation back to overview
+          ready_for_next:
+            type: boolean
+            description: Whether ready to process next account
+      error_code_mapping: null
+      max_retries: 2
+      max_steps_per_run: 15
+      complete_on_download: false
+      cache_actions: false
+      complete_criterion: "Successfully returned to accounts overview page"
+      terminate_criterion: "Stop when back at accounts overview - ready for next account processing"
+      engine: skyvern-2.0

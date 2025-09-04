@@ -1,0 +1,658 @@
+{
+  "extraction_type": "ENHANCED_ACCOUNT_DETAILS_AND_TRANSACTIONS",
+  "target_account": "12345",
+  "timestamp": "2025-09-04T17:27:42.993776",
+  "status": "completed",
+  "workflow_id": "wpid_435164512340612548",
+  "raw_output": {
+    "Login_To_Bank_output": {
+      "task_id": "tsk_435165288585436848",
+      "status": "completed",
+      "extracted_information": {
+        "login_success": true,
+        "accounts_overview": [
+          {
+            "account_number": "13344",
+            "balance": "-$7908.07"
+          },
+          {
+            "account_number": "13566",
+            "balance": "$12021.00"
+          },
+          {
+            "account_number": "14121",
+            "balance": "$300.00"
+          },
+          {
+            "account_number": "14565",
+            "balance": "$1600.00"
+          },
+          {
+            "account_number": "14676",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "15675",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "15897",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "16896",
+            "balance": "-$1900.00"
+          },
+          {
+            "account_number": "17007",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "17229",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "17784",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18006",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18117",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18228",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18450",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18783",
+            "balance": "$110.00"
+          },
+          {
+            "account_number": "19116",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "26886",
+            "balance": "$100.00"
+          }
+        ],
+        "page_status": "Accounts Overview"
+      },
+      "failure_reason": null,
+      "errors": [],
+      "downloaded_files": [],
+      "downloaded_file_urls": null
+    },
+    "Extract_First_Account_Details_output": {
+      "task_id": "tsk_435165692312362776",
+      "status": "completed",
+      "extracted_information": {
+        "account_details": {
+          "account_number": "13344",
+          "account_type": "CHECKING",
+          "balance": "-$7908.07",
+          "available_balance": "$0.00",
+          "account_name": null,
+          "opening_date": null,
+          "interest_rate": null,
+          "account_status": null
+        },
+        "page_content": "Account Details for account number 13344, a CHECKING account with a balance of -$7908.07 and an available balance of $0.00. The page also displays recent account activity.",
+        "navigation_success": true
+      },
+      "failure_reason": null,
+      "errors": [],
+      "downloaded_files": [],
+      "downloaded_file_urls": null
+    },
+    "Extract_Account_Transactions_output": {
+      "task_id": "tsk_435165932830531424",
+      "status": "completed",
+      "extracted_information": {
+        "transactions": [
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$12321.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "14476"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "15142"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$55.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "16030"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Received",
+            "amount": "$55.00",
+            "balance": null,
+            "transaction_type": "credit",
+            "reference_number": "16141"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "16252"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "16696"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "18139"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "19693"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$10.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "22690"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "24466"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$1.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "26575"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Received",
+            "amount": "$1.00",
+            "balance": null,
+            "transaction_type": "credit",
+            "reference_number": "26686"
+          }
+        ],
+        "transaction_summary": {
+          "total_transactions": 12,
+          "date_range": "09-03-2025",
+          "account_number": "13344"
+        },
+        "extraction_notes": "The account balance after each transaction is not available on this page."
+      },
+      "failure_reason": null,
+      "errors": [],
+      "downloaded_files": [],
+      "downloaded_file_urls": null
+    },
+    "Return_To_Overview_For_Next_Account_output": {
+      "task_id": "tsk_435166160463798178",
+      "status": "completed",
+      "extracted_information": {
+        "back_to_overview": true,
+        "next_accounts_available": [
+          {
+            "account_number": "13344",
+            "balance": "$5022.93"
+          }
+        ],
+        "navigation_status": "Successfully navigated to accounts overview.",
+        "ready_for_next": true
+      },
+      "failure_reason": null,
+      "errors": [],
+      "downloaded_files": [],
+      "downloaded_file_urls": null
+    },
+    "extracted_information": [
+      {
+        "login_success": true,
+        "accounts_overview": [
+          {
+            "account_number": "13344",
+            "balance": "-$7908.07"
+          },
+          {
+            "account_number": "13566",
+            "balance": "$12021.00"
+          },
+          {
+            "account_number": "14121",
+            "balance": "$300.00"
+          },
+          {
+            "account_number": "14565",
+            "balance": "$1600.00"
+          },
+          {
+            "account_number": "14676",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "15675",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "15897",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "16896",
+            "balance": "-$1900.00"
+          },
+          {
+            "account_number": "17007",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "17229",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "17784",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18006",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18117",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18228",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18450",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "18783",
+            "balance": "$110.00"
+          },
+          {
+            "account_number": "19116",
+            "balance": "$100.00"
+          },
+          {
+            "account_number": "26886",
+            "balance": "$100.00"
+          }
+        ],
+        "page_status": "Accounts Overview"
+      },
+      {
+        "account_details": {
+          "account_number": "13344",
+          "account_type": "CHECKING",
+          "balance": "-$7908.07",
+          "available_balance": "$0.00",
+          "account_name": null,
+          "opening_date": null,
+          "interest_rate": null,
+          "account_status": null
+        },
+        "page_content": "Account Details for account number 13344, a CHECKING account with a balance of -$7908.07 and an available balance of $0.00. The page also displays recent account activity.",
+        "navigation_success": true
+      },
+      {
+        "transactions": [
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$12321.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "14476"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "15142"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$55.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "16030"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Received",
+            "amount": "$55.00",
+            "balance": null,
+            "transaction_type": "credit",
+            "reference_number": "16141"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "16252"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "16696"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "18139"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "19693"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$10.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "22690"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$100.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "24466"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Sent",
+            "amount": "-$1.00",
+            "balance": null,
+            "transaction_type": "debit",
+            "reference_number": "26575"
+          },
+          {
+            "date": "09-03-2025",
+            "description": "Funds Transfer Received",
+            "amount": "$1.00",
+            "balance": null,
+            "transaction_type": "credit",
+            "reference_number": "26686"
+          }
+        ],
+        "transaction_summary": {
+          "total_transactions": 12,
+          "date_range": "09-03-2025",
+          "account_number": "13344"
+        },
+        "extraction_notes": "The account balance after each transaction is not available on this page."
+      },
+      {
+        "back_to_overview": true,
+        "next_accounts_available": [
+          {
+            "account_number": "13344",
+            "balance": "$5022.93"
+          }
+        ],
+        "navigation_status": "Successfully navigated to accounts overview.",
+        "ready_for_next": true
+      }
+    ]
+  },
+  "processed_data": {
+    "login_success": true,
+    "account_details": {
+      "account_number": "13344",
+      "account_type": "CHECKING",
+      "balance": "-$7908.07",
+      "available_balance": "$0.00",
+      "account_name": null,
+      "opening_date": null,
+      "interest_rate": null,
+      "account_status": null
+    },
+    "transactions": [
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$12321.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "14476"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$100.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "15142"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$55.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "16030"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Received",
+        "amount": "$55.00",
+        "balance": null,
+        "transaction_type": "credit",
+        "reference_number": "16141"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$100.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "16252"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$100.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "16696"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$100.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "18139"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$100.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "19693"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$10.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "22690"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$100.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "24466"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Sent",
+        "amount": "-$1.00",
+        "balance": null,
+        "transaction_type": "debit",
+        "reference_number": "26575"
+      },
+      {
+        "date": "09-03-2025",
+        "description": "Funds Transfer Received",
+        "amount": "$1.00",
+        "balance": null,
+        "transaction_type": "credit",
+        "reference_number": "26686"
+      }
+    ],
+    "accounts_overview": [
+      {
+        "account_number": "13344",
+        "balance": "-$7908.07"
+      },
+      {
+        "account_number": "13566",
+        "balance": "$12021.00"
+      },
+      {
+        "account_number": "14121",
+        "balance": "$300.00"
+      },
+      {
+        "account_number": "14565",
+        "balance": "$1600.00"
+      },
+      {
+        "account_number": "14676",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "15675",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "15897",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "16896",
+        "balance": "-$1900.00"
+      },
+      {
+        "account_number": "17007",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "17229",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "17784",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "18006",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "18117",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "18228",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "18450",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "18783",
+        "balance": "$110.00"
+      },
+      {
+        "account_number": "19116",
+        "balance": "$100.00"
+      },
+      {
+        "account_number": "26886",
+        "balance": "$100.00"
+      }
+    ],
+    "ready_for_next_account": true,
+    "extraction_summary": {
+      "target_account": "12345",
+      "login_successful": true,
+      "account_details_found": true,
+      "transactions_count": 12,
+      "ready_for_next": true,
+      "extraction_timestamp": "2025-09-04T17:27:42.993776"
+    }
+  },
+  "account_details_extracted": true,
+  "transactions_extracted": 12,
+  "ready_for_next_account": true
+}
