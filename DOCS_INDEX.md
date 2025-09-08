@@ -1,150 +1,150 @@
 # 📖 Documentation Index
 
-**Guide complet pour le projet AI Banking Automation POC**
+**Complete guide for the AI Banking Automation POC project**
 
-## 🗺️ Navigation Rapide
+## 🗺️ Quick Navigation
 
-| Document | Description | Audience | Temps de lecture |
-|----------|-------------|----------|------------------|
-| **[README.md](README.md)** | Vue d'ensemble complète du projet | Tous | 15 min |
-| **[QUICK_START.md](QUICK_START.md)** | Démarrage en 5 minutes | Développeurs | 5 min |
-| **[TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md)** | Architecture et détails techniques | Développeurs avancés | 30 min |
-| **[SKYVERN_API_SETUP.md](SKYVERN_API_SETUP.md)** | Configuration API Skyvern | Tous | 10 min |
+| Document | Description | Audience | Reading time |
+|----------|-------------|----------|--------------|
+| **[README.md](README.md)** | Complete project overview | Everyone | 15 min |
+| **[QUICK_START.md](QUICK_START.md)** | 5-minute startup | Developers | 5 min |
+| **[TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md)** | Architecture and technical details | Advanced developers | 30 min |
+| **[SKYVERN_API_SETUP.md](SKYVERN_API_SETUP.md)** | Skyvern API configuration | Everyone | 10 min |
 
-## 🚀 Parcours Recommandés
+## 🚀 Recommended Paths
 
-### 👨‍💻 **Nouveau Développeur**
-1. 📖 [QUICK_START.md](QUICK_START.md) - Configuration rapide
-2. 🧪 Exécuter `python simple_test.py`
-3. 📚 [README.md](README.md) - Compréhension complète
+### 👨‍💻 **New Developer**
+1. 📖 [QUICK_START.md](QUICK_START.md) - Quick setup
+2. 🧪 Run `python simple_test.py`
+3. 📚 [README.md](README.md) - Complete understanding
 4. 🔧 [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md) - Architecture
 
-### 👨‍💼 **Chef de Projet / Product Owner**
-1. 📖 [README.md](README.md) - Vue d'ensemble
-2. 📊 Section "Résultats" - Données extraites
+### 👨‍💼 **Project Manager / Product Owner**
+1. 📖 [README.md](README.md) - Overview
+2. 📊 "Results" section - Extracted data
 
-### 🔧 **DevOps / Admin Système**
-1. 🔑 [SKYVERN_API_SETUP.md](SKYVERN_API_SETUP.md) - Configuration API
-2. 🏗️ [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md) - Architecture système
-3. 📂 Section "Déploiement" - Configuration production
-4. 📊 Section "Monitoring" - Métriques
+### 🔧 **DevOps / System Admin**
+1. 🔑 [SKYVERN_API_SETUP.md](SKYVERN_API_SETUP.md) - API configuration
+2. 🏗️ [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md) - System architecture
+3. 📂 "Deployment" section - Production configuration
+4. 📊 "Monitoring" section - Metrics
 
-### 🧪 **Testeur / QA**
-1. 📖 [README.md](README.md) - Fonctionnalités attendues
-2. 🧪 Section "Tests" - Procédures de test
-3. 🔍 [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md) - Tests techniques
+### 🧪 **Tester / QA**
+1. 📖 [README.md](README.md) - Expected features
+2. 🧪 "Tests" section - Testing procedures
+3. 🔍 [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md) - Technical testing
 
 
-## 📁 Structure des Fichiers
+## 📁 File Structure
 
 ```
 📁 ai-bank-skyvern-poc/
 ├── 📄 Documentation/
-│   ├── README.md              # 🏠 Page d'accueil
-│   ├── QUICK_START.md         # ⚡ Démarrage rapide
-│   ├── TECHNICAL_GUIDE.md     # 🔧 Guide technique
-│   ├── SKYVERN_API_SETUP.md   # 🔑 Configuration API
-│   ├── CHANGELOG.md           # 📅 Historique versions
-│   └── DOCS_INDEX.md          # 📖 Ce fichier
+│   ├── README.md              # 🏠 Home page
+│   ├── QUICK_START.md         # ⚡ Quick start
+│   ├── TECHNICAL_GUIDE.md     # 🔧 Technical guide
+│   ├── SKYVERN_API_SETUP.md   # 🔑 API configuration
+│   ├── CHANGELOG.md           # 📅 Version history
+│   └── DOCS_INDEX.md          # 📖 This file
 │
-├── 🐍 Code Source/
-│   ├── simple_test.py         # Test rapide
-│   ├── enhanced_extractor.py  # Extracteur principal
-│   └── test_dynamic_detection.py # Tests automatiques
+├── 🐍 Source Code/
+│   ├── simple_test.py         # Quick test
+│   ├── enhanced_extractor.py  # Main extractor
+│   └── test_dynamic_detection.py # Automatic tests
 │
 ├── ⚙️ Configuration/
-│   ├── .env                   # Variables environnement
-│   ├── requirements.txt       # Dépendances Python
-│   └── recipes/               # Workflows YAML
+│   ├── .env                   # Environment variables
+│   ├── requirements.txt       # Python dependencies
+│   └── recipes/               # YAML workflows
 │
-├── 📊 Résultats/
-│   └── outputs/               # Données extraites JSON
+├── 📊 Results/
+│   └── outputs/               # Extracted JSON data
 │
-└── 🛠️ Utilitaires/
-    ├── utils/schemas.py       # Modèles données
-    └── handlers/              # Gestionnaires spécialisés
+└── 🛠️ Utilities/
+    ├── utils/schemas.py       # Data models
+    └── handlers/              # Specialized handlers
 ```
 
-## 🎯 Objectifs par Document
+## 🎯 Objectives by Document
 
 ### 📄 README.md
-**Objectif** : Vue d'ensemble complète  
-**Contenu** :
-- Introduction au projet
-- Installation et configuration
-- Utilisation avec exemples
-- Résultats obtenus
-- Dépannage
+**Objective**: Complete overview  
+**Content**:
+- Project introduction
+- Installation and configuration
+- Usage with examples
+- Results obtained
+- Troubleshooting
 
 ### ⚡ QUICK_START.md
-**Objectif** : Démarrage immédiat  
-**Contenu** :
-- Installation en 4 étapes
-- Configuration minimale
-- Tests de validation
-- Résolution problèmes express
+**Objective**: Immediate startup  
+**Content**:
+- 4-step installation
+- Minimal configuration
+- Validation tests
+- Express troubleshooting
 
 ### 🔧 TECHNICAL_GUIDE.md
-**Objectif** : Compréhension technique approfondie  
-**Contenu** :
-- Architecture système
-- Algorithmes clés
-- Optimisations
-- Sécurité et monitoring
-- Plans d'évolution
+**Objective**: Deep technical understanding  
+**Content**:
+- System architecture
+- Key algorithms
+- Optimizations
+- Security and monitoring
+- Evolution plans
 
 ### 🔑 SKYVERN_API_SETUP.md
-**Objectif** : Configuration API Skyvern  
-**Contenu** :
-- Création compte Skyvern
-- Génération clés API
-- Configuration environnement
-- Tests de connectivité
+**Objective**: Skyvern API configuration  
+**Content**:
+- Skyvern account creation
+- API key generation
+- Environment configuration
+- Connectivity tests
 
-## 🔍 Index par Sujet
+## 🔍 Index by Topic
 
 ### 🏦 Banking & Finance
-- [Extraction données bancaires](README.md#extraction-de-données)
-- [Comptes et transactions](README.md#résultats)
+- [Bank data extraction](README.md#data-extraction)
+- [Accounts and transactions](README.md#results)
 - [ParaBank configuration](README.md#configuration)
 
-### 🤖 Intelligence Artificielle
-- [Skyvern overview](README.md#vue-densemble)
-- [Workflows YAML](TECHNICAL_GUIDE.md#workflow-yaml)
-- [Navigation intelligente](TECHNICAL_GUIDE.md#algorithmes-clés)
+### 🤖 Artificial Intelligence
+- [Skyvern overview](README.md#overview)
+- [YAML workflows](TECHNICAL_GUIDE.md#yaml-workflow)
+- [Intelligent navigation](TECHNICAL_GUIDE.md#key-algorithms)
 
-### 💻 Développement
-- [Architecture code](TECHNICAL_GUIDE.md#architecture-du-système)
-- [Tests automatisés](TECHNICAL_GUIDE.md#tests-et-validation)
-- [Débogage](README.md#dépannage)
+### 💻 Development
+- [Code architecture](TECHNICAL_GUIDE.md#system-architecture)
+- [Automated tests](TECHNICAL_GUIDE.md#tests-and-validation)
+- [Debugging](README.md#troubleshooting)
 
 ### 🔧 Infrastructure
-- [Configuration serveur](TECHNICAL_GUIDE.md#déploiement-et-production)
-- [Monitoring](TECHNICAL_GUIDE.md#monitoring-et-métriques)
-- [Sécurité](TECHNICAL_GUIDE.md#sécurité-et-bonnes-pratiques)
+- [Server configuration](TECHNICAL_GUIDE.md#deployment-and-production)
+- [Monitoring](TECHNICAL_GUIDE.md#monitoring-and-metrics)
+- [Security](TECHNICAL_GUIDE.md#security-and-best-practices)
 
-## ❓ FAQ Rapide
+## ❓ Quick FAQ
 
-### **Q: Par où commencer ?**
-**R:** [QUICK_START.md](QUICK_START.md) pour démarrage immédiat, puis [README.md](README.md) pour vue complète.
+### **Q: Where to start?**
+**A:** [QUICK_START.md](QUICK_START.md) for immediate startup, then [README.md](README.md) for complete view.
 
-### **Q: Comment résoudre les erreurs d'API ?**
-**R:** Section [Dépannage du README](README.md#dépannage) + [Configuration API](SKYVERN_API_SETUP.md).
+### **Q: How to solve API errors?**
+**A:** [README Troubleshooting](README.md#troubleshooting) section + [API Configuration](SKYVERN_API_SETUP.md).
 
-### **Q: Quelles données sont extraites ?**
-**R:** Section [Résultats du README](README.md#résultats) avec exemples JSON.
+### **Q: What data is extracted?**
+**A:** [README Results](README.md#results) section with JSON examples.
 
-### **Q: Comment personnaliser l'extraction ?**
-**R:** [Guide technique](TECHNICAL_GUIDE.md#workflow-yaml) pour modification workflows.
+### **Q: How to customize extraction?**
+**A:** [Technical guide](TECHNICAL_GUIDE.md#yaml-workflow) for workflow modifications.
 
 
 ## 🎉 Getting Started
 
-**Première fois ?** → [QUICK_START.md](QUICK_START.md)  
-**Problème technique ?** → [README.md#dépannage](README.md#dépannage)  
-**Contribution ?** → [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md)  
+**First time?** → [QUICK_START.md](QUICK_START.md)  
+**Technical problem?** → [README.md#troubleshooting](README.md#troubleshooting)  
+**Contributing?** → [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md)  
 
 ---
 
-**📚 Documentation maintenue par [Mohamed.Dhia] - Septembre 2025**  
+**📚 Documentation maintained by [Mohamed.Dhia] - September 2025**  
 *AI Banking Automation POC - Powered by Skyvern*
