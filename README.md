@@ -1,92 +1,92 @@
 # 🏦 AI Bank Data Extraction POC
 
-**Proof of Concept d'automatisation bancaire alimenté par l'IA avec Skyvern**
+**AI-Powered Banking Automation Proof of Concept with Skyvern**
 
-Un système intelligent d'extraction de données bancaires qui utilise Skyvern pour automatiser la navigation web et extraire des informations financières réelles de ParaBank.
+An intelligent banking data extraction system that uses Skyvern to automate web navigation and extract real financial information from ParaBank.
 
-## 📋 Table des Matières
+## 📋 Table of Contents
 
-- [🎯 Vue d'ensemble](#vue-densemble)
-- [✨ Fonctionnalités](#fonctionnalités)
+- [🎯 Overview](#overview)
+- [✨ Features](#features)
 - [🔧 Installation](#installation)
 - [⚙️ Configuration](#configuration)
-- [🚀 Utilisation](#utilisation)
-- [📁 Structure du Projet](#structure-du-projet)
+- [🚀 Usage](#usage)
+- [📁 Project Structure](#project-structure)
 - [🧪 Tests](#tests)
-- [📊 Résultats](#résultats)
-- [🔍 Dépannage](#dépannage)
-- [📚 Références](#références)
+- [📊 Results](#results)
+- [🔍 Troubleshooting](#troubleshooting)
+- [📚 References](#references)
 
-## 🎯 Vue d'ensemble
+## 🎯 Overview
 
-Ce projet démontre l'utilisation de **Skyvern** (plateforme d'automatisation web alimentée par l'IA) pour extraire automatiquement des données bancaires réelles à partir de **ParaBank**, un site de démonstration bancaire.
+This project demonstrates the use of **Skyvern** (AI-powered web automation platform) to automatically extract real banking data from **ParaBank**, a banking demonstration website.
 
-## 🎬 Démonstration Vidéo
+## 🎬 Demo Video
 
 https://github.com/MedDhiee/AI-Bank-Data-Extraction-POC-with-Skyvern/issues/1#issue-3384704974
 
-> 📹 **La vidéo montre** : Navigation automatique sur ParaBank, extraction de comptes réels, et récupération des transactions en temps réel avec Skyvern AI.
+> 📹 **The video shows**: Automatic navigation on ParaBank, real account extraction, and transaction retrieval in real-time with Skyvern AI.
 
-**🎥 Ce que vous verrez dans la démo :**
-- ✅ Interface Skyvern en action avec votre workflow
-- ✅ Login automatique sur ParaBank via l'IA
-- ✅ Navigation intelligente entre les pages bancaires
-- ✅ Extraction de données en temps réel sans intervention humaine
-- ✅ Résultats structurés JSON générés automatiquement
+**🎥 What you'll see in the demo:**
+- ✅ Skyvern interface in action with your workflow
+- ✅ Automatic login to ParaBank via AI
+- ✅ Intelligent navigation between banking pages
+- ✅ Real-time data extraction without human intervention
+- ✅ Automatically generated structured JSON results
 
 ---
 
-### 🎭 Problème Résolu
+### 🎭 Problem Solved
 
-- **Défi** : Extraire automatiquement des données bancaires complexes (comptes, transactions, investissements)
-- **Solution** : Utilisation de Skyvern pour une navigation web intelligente et une extraction de données structurées
-- **Innovation** : Détection dynamique des comptes et gestion intelligente des erreurs
+- **Challenge**: Automatically extract complex banking data (accounts, transactions, investments)
+- **Solution**: Using Skyvern for intelligent web navigation and structured data extraction
+- **Innovation**: Dynamic account detection and intelligent error handling
 
-### 🏆 Résultats Obtenus
+### 🏆 Results Achieved
 
-- ✅ **16 comptes bancaires** extraits avec détails complets
-- ✅ **Historique des transactions** avec 9 transactions réelles
-- ✅ **Navigation intelligente** sans boucles infinies
-- ✅ **Détection automatique** du premier compte disponible
+- ✅ **16 bank accounts** extracted with complete details
+- ✅ **Transaction history** with 9 real transactions
+- ✅ **Intelligent navigation** without infinite loops
+- ✅ **Automatic detection** of the first available account
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-### 🔍 Extraction Simple
-- **Test rapide** avec utilisation minimale de crédits
-- **Vue d'ensemble** de tous les comptes disponibles
-- **Validation** de l'API et des credentials
+### 🔍 Simple Extraction
+- **Quick test** with minimal credit usage
+- **Overview** of all available accounts
+- **Validation** of API and credentials
 
-### 🔥 Extraction Avancée
-- **Détails complets** des comptes (type, solde, statut)
-- **Historique des transactions** avec dates, montants, références
-- **Navigation systématique** à travers les pages de détails
-- **Retour intelligent** à la page d'aperçu
+### 🔥 Advanced Extraction
+- **Complete details** of accounts (type, balance, status)
+- **Transaction history** with dates, amounts, references
+- **Systematic navigation** through detail pages
+- **Intelligent return** to overview page
 
-### 🎯 Détection Dynamique
-- **Auto-détection** du premier compte disponible
-- **Fallback intelligent** avec comptes multiples
-- **Gestion d'erreurs** robuste pour les limitations d'API
+### 🎯 Dynamic Detection
+- **Auto-detection** of the first available account
+- **Intelligent fallback** with multiple accounts
+- **Robust error handling** for API limitations
 
-### 🛡️ Fonctionnalités Avancées
-- **Schémas Pydantic** pour validation des données
-- **Gestion des interventions** humaines (2FA, CAPTCHA)
-- **Export JSON** structuré des résultats
-- **Logging détaillé** pour débogage
+### 🛡️ Advanced Features
+- **Pydantic schemas** for data validation
+- **Human intervention** handling (2FA, CAPTCHA)
+- **Structured JSON** export of results
+- **Detailed logging** for debugging
 
 ## 🔧 Installation
 
-### Prérequis
+### Prerequisites
 - **Python 3.8+**
-- **Compte Skyvern** avec API key
-- **Git** (optionnel)
+- **Skyvern account** with API key
+- **Git** (optional)
 
-### 1. Cloner le Projet
+### 1. Clone the Project
 ```bash
-git clone https://github.com/votre-username/ai-bank-skyvern-poc.git
+git clone https://github.com/your-username/ai-bank-skyvern-poc.git
 cd ai-bank-skyvern-poc
 ```
 
-### 2. Créer un Environnement Virtuel
+### 2. Create a Virtual Environment
 ```bash
 python -m venv .venv
 
@@ -97,55 +97,55 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Installer les Dépendances
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Vérifier l'Installation
+### 4. Verify Installation
 ```bash
-python -c "import skyvern; print('✅ Skyvern installé avec succès')"
+python -c "import skyvern; print('✅ Skyvern installed successfully')"
 ```
 
 ## ⚙️ Configuration
 
-### 1. Obtenir une Clé API Skyvern
+### 1. Get a Skyvern API Key
 
-1. **Créer un compte** : [app.skyvern.com](https://app.skyvern.com)
-2. **Naviguer vers** : Settings → API Keys
-3. **Générer** une nouvelle clé API
-4. **Ajouter des crédits** : Billing → Add Credits
+1. **Create an account**: [app.skyvern.com](https://app.skyvern.com)
+2. **Navigate to**: Settings → API Keys
+3. **Generate** a new API key
+4. **Add credits**: Billing → Add Credits
 
-### 2. Configuration de l'Environnement
+### 2. Environment Configuration
 
-Copier le fichier d'exemple et le configurer :
+Copy the example file and configure it:
 ```bash
 cp .env.example .env
 ```
 
-Modifier le fichier `.env` :
+Edit the `.env` file:
 ```properties
-# Configuration Bancaire
+# Banking Configuration
 TARGET_URL=https://parabank.parasoft.com/parabank/index.htm
 USERNAME='MedDhia'
 PASSWORD='MedDhia123'
 
-# Clé API Skyvern (OBLIGATOIRE)
-SKYVERN_API_KEY='votre_cle_api_skyvern_ici'
+# Skyvern API Key (REQUIRED)
+SKYVERN_API_KEY='your_skyvern_api_key_here'
 
-# Configuration LLM (Optionnel)
+# LLM Configuration (Optional)
 ENABLE_OPENAI=true
-OPENAI_API_KEY=votre_cle_openai_ici
+OPENAI_API_KEY=your_openai_key_here
 ```
 
-### 3. Validation de la Configuration
+### 3. Configuration Validation
 
-Tester la configuration :
+Test the configuration:
 ```bash
 python simple_test.py
 ```
 
-**Sortie attendue** :
+**Expected output**:
 ```
 ✅ Skyvern imported successfully
 🎯 AI Banking Automation POC - REAL DATA EXTRACTION
@@ -155,127 +155,127 @@ python simple_test.py
    Accounts: 16
 ```
 
-## 🚀 Utilisation
+## 🚀 Usage
 
-### 🧪 Test Simple (Recommandé en premier)
+### 🧪 Simple Test (Recommended first)
 
-Extraction rapide de la vue d'ensemble des comptes :
+Quick extraction of account overview:
 ```bash
 python simple_test.py
 ```
 
-**Utilise** : Crédits minimaux  
-**Extrait** : Liste de tous les comptes avec balances  
-**Durée** : ~30 secondes  
+**Uses**: Minimal credits  
+**Extracts**: List of all accounts with balances  
+**Duration**: ~30 seconds  
 
-### 🔥 Extraction Avancée
+### 🔥 Advanced Extraction
 
-Extraction complète d'un compte spécifique :
+Complete extraction of a specific account:
 ```bash
 python enhanced_extractor.py
 ```
 
-**Utilise** : Plus de crédits  
-**Extrait** : Détails complets + transactions  
-**Durée** : ~5-10 minutes  
+**Uses**: More credits  
+**Extracts**: Complete details + transactions  
+**Duration**: ~5-10 minutes  
 
-### 🎯 Extraction avec Compte Spécifique
+### 🎯 Extraction with Specific Account
 
 ```python
 from enhanced_extractor import EnhancedBankExtractor
 
 extractor = EnhancedBankExtractor()
 
-# Auto-détection du premier compte
+# Auto-detection of first account
 result = await extractor.extract_account_details_and_transactions()
 
-# Compte spécifique
+# Specific account
 result = await extractor.extract_account_details_and_transactions("12567")
 ```
 
-### 🔄 Extraction Multi-Comptes
+### 🔄 Multi-Account Extraction
 
 ```python
-# Traiter plusieurs comptes
+# Process multiple accounts
 accounts = ["12345", "12456", "12567"]
 results = await extractor.extract_multiple_accounts(accounts)
 ```
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 ai-bank-skyvern-poc/
-├── 📄 README.md                    # Ce fichier
-├── 📄 requirements.txt             # Dépendances Python
-├── 📄 .env                        # Configuration (à créer)
-├── 📄 .env.example                # Exemple de configuration
-├── 📄 SKYVERN_API_SETUP.md        # Guide détaillé API
+├── 📄 README.md                    # This file
+├── 📄 requirements.txt             # Python dependencies
+├── 📄 .env                        # Configuration (to create)
+├── 📄 .env.example                # Configuration example
+├── 📄 SKYVERN_API_SETUP.md        # Detailed API guide
 │
-├── 🐍 simple_test.py              # Test simple et rapide
-├── 🐍 enhanced_extractor.py       # Extracteur avancé principal
-├── 🐍 test_dynamic_detection.py   # Tests de détection automatique
+├── 🐍 simple_test.py              # Simple and quick test
+├── 🐍 enhanced_extractor.py       # Main advanced extractor
+├── 🐍 test_dynamic_detection.py   # Automatic detection tests
 │
-├── 📂 recipes/                    # Workflows YAML Skyvern
+├── 📂 recipes/                    # Skyvern YAML workflows
 │   └── enhanced_bank_extraction.yaml
 │
-├── 📂 utils/                      # Utilitaires et schémas
-│   └── schemas.py                 # Modèles Pydantic
+├── 📂 utils/                      # Utilities and schemas
+│   └── schemas.py                 # Pydantic models
 │
-├── 📂 handlers/                   # Gestionnaires spécialisés
-│   └── intervention_broker.py     # Gestion interventions humaines
+├── 📂 handlers/                   # Specialized handlers
+│   └── intervention_broker.py     # Human intervention management
 │
-├── 📂 outputs/                    # Résultats des extractions
+├── 📂 outputs/                    # Extraction results
 │   └── enhanced_extraction_*.json
 │
-└── 📂 .venv/                      # Environnement virtuel Python
+└── 📂 .venv/                      # Python virtual environment
 ```
 
-### 🔑 Fichiers Clés
+### 🔑 Key Files
 
-| Fichier | Description | Usage |
-|---------|-------------|-------|
-| `simple_test.py` | Test rapide avec crédits minimaux | Premier test, validation setup |
-| `enhanced_extractor.py` | Extracteur principal avec détails complets | Extraction de production |
-| `recipes/enhanced_bank_extraction.yaml` | Workflow Skyvern pour extraction | Configuration navigation IA |
-| `utils/schemas.py` | Modèles de données Pydantic | Validation et structure données |
+| File | Description | Usage |
+|------|-------------|-------|
+| `simple_test.py` | Quick test with minimal credits | First test, setup validation |
+| `enhanced_extractor.py` | Main extractor with complete details | Production extraction |
+| `recipes/enhanced_bank_extraction.yaml` | Skyvern workflow for extraction | AI navigation configuration |
+| `utils/schemas.py` | Pydantic data models | Data validation and structure |
 
 ## 🧪 Tests
 
-### Test de Validation Rapide
+### Quick Validation Test
 ```bash
 python simple_test.py
 ```
-**Vérifie** : API key, connexion, comptes disponibles
+**Verifies**: API key, connection, available accounts
 
-### Test de Détection Dynamique
+### Dynamic Detection Test
 ```bash
 python test_dynamic_detection.py
 ```
-**Vérifie** : Détection automatique premier compte, fallbacks
+**Verifies**: Automatic first account detection, fallbacks
 
-### Test d'Extraction Complète
+### Complete Extraction Test
 ```bash
 python enhanced_extractor.py
 ```
-**Vérifie** : Extraction détaillée avec transactions
+**Verifies**: Detailed extraction with transactions
 
-## 📊 Résultats
+## 📊 Results
 
-### 📈 Données Extraites Réelles
+### 📈 Real Extracted Data
 
-**Comptes ParaBank Extraits** :
+**ParaBank Accounts Extracted**:
 ```json
 {
   "accounts": [
     {"account_number": "12345", "balance": "-$3400.00", "type": "CHECKING"},
     {"account_number": "12456", "balance": "-$189.55", "type": "CHECKING"},
     {"account_number": "12567", "balance": "$100.00", "type": "SAVINGS"},
-    // ... 13 autres comptes
+    // ... 13 other accounts
   ]
 }
 ```
 
-**Transactions Réelles Extraites** :
+**Real Transactions Extracted**:
 ```json
 {
   "transactions": [
@@ -291,53 +291,53 @@ python enhanced_extractor.py
       "amount": "-$1000.00",
       "reference_number": "12589"
     }
-    // ... 7 autres transactions
+    // ... 7 other transactions
   ]
 }
 ```
 
-### 📊 Métriques de Performance
+### 📊 Performance Metrics
 
-| Métrique | Valeur | Notes |
-|----------|--------|-------|
-| **Comptes extraits** | 16 | Tous les comptes disponibles |
-| **Transactions extraites** | 9 | Période 10 mois |
-| **Taux de réussite** | 100% | Avec crédits suffisants |
-| **Temps d'exécution** | 5-10 min | Extraction complète |
-| **Précision des données** | 100% | Données réelles ParaBank |
+| Metric | Value | Notes |
+|--------|-------|-------|
+| **Accounts extracted** | 16 | All available accounts |
+| **Transactions extracted** | 9 | 10-month period |
+| **Success rate** | 100% | With sufficient credits |
+| **Execution time** | 5-10 min | Complete extraction |
+| **Data accuracy** | 100% | Real ParaBank data |
 
-## 🔍 Dépannage
+## 🔍 Troubleshooting
 
-### ❌ Erreurs Communes
+### ❌ Common Errors
 
 #### 1. `No module named 'skyvern'`
-**Solution** :
+**Solution**:
 ```bash
-# Activer l'environnement virtuel
+# Activate virtual environment
 .venv\Scripts\activate  # Windows
 source .venv/bin/activate  # macOS/Linux
 
-# Réinstaller
+# Reinstall
 pip install skyvern
 ```
 
 #### 2. `Insufficient credit balance`
-**Cause** : Pas assez de crédits Skyvern  
-**Solution** :
-1. Aller sur [app.skyvern.com/billing](https://app.skyvern.com/billing)
-2. Ajouter des crédits à votre compte
-3. Utiliser `simple_test.py` pour tester avec moins de crédits
+**Cause**: Not enough Skyvern credits  
+**Solution**:
+1. Go to [app.skyvern.com/billing](https://app.skyvern.com/billing)
+2. Add credits to your account
+3. Use `simple_test.py` to test with fewer credits
 
 #### 3. `SKYVERN_API_KEY not found`
-**Cause** : Clé API manquante ou incorrecte  
-**Solution** :
-1. Vérifier le fichier `.env`
-2. S'assurer que la clé commence par `eyJ...`
-3. Pas d'espaces ou de guillemets supplémentaires
+**Cause**: Missing or incorrect API key  
+**Solution**:
+1. Check the `.env` file
+2. Ensure the key starts with `eyJ...`
+3. No extra spaces or quotes
 
 #### 4. `Simple test YAML not found`
-**Cause** : Fichier de workflow manquant  
-**Solution** :
+**Cause**: Missing workflow file  
+**Solution**:
 ```bash
 # Vérifier la présence des fichiers
 ls recipes/
@@ -378,55 +378,55 @@ client = Skyvern(api_key="votre_cle")
 - **Communauté Discord** : [discord.gg/skyvern](https://discord.gg/skyvern)
 - **GitHub** : [github.com/skyvern-ai/skyvern](https://github.com/skyvern-ai/skyvern)
 
-### 🏦 ParaBank (Site de Test)
+### 🏦 ParaBank (Test Site)
 
-- **URL** : [parabank.parasoft.com](https://parabank.parasoft.com/parabank/index.htm)
-- **Credentials de test** : `MedDhia` / `MedDhia123`
-- **Documentation** : [Parasoft ParaBank](https://parabank.parasoft.com/parabank/about.htm)
+- **URL**: [parabank.parasoft.com](https://parabank.parasoft.com/parabank/index.htm)
+- **Test Credentials**: `MedDhia` / `MedDhia123`
+- **Documentation**: [Parasoft ParaBank](https://parabank.parasoft.com/parabank/about.htm)
 
-### 🧠 Concepts IA et Automatisation
+### 🧠 AI and Automation Concepts
 
-- **Web Scraping avec IA** : [Introduction](https://www.scrapehero.com/web-scraping-with-ai/)
-- **Automatisation bancaire** : [Banking Automation](https://www.finextra.com/blogposting/21456/the-future-of-banking-automation)
-- **Pydantic pour validation** : [Real Python Guide](https://realpython.com/python-pydantic/)
+- **AI Web Scraping**: [Introduction](https://www.scrapehero.com/web-scraping-with-ai/)
+- **Banking Automation**: [Banking Automation](https://www.finextra.com/blogposting/21456/the-future-of-banking-automation)
+- **Pydantic for Validation**: [Real Python Guide](https://realpython.com/python-pydantic/)
 
 ## 🤝 Contribution
 
-### 🔄 Améliorations Futures
+### 🔄 Future Improvements
 
-- [ ] **Support multi-banques** (Chase, Bank of America, etc.)
-- [ ] **Interface graphique** avec Streamlit
-- [ ] **Planification automatique** avec cron jobs
-- [ ] **Export vers Excel/CSV**
-- [ ] **Alertes par email** pour anomalies
-- [ ] **Intégration base de données**
+- [ ] **Multi-bank support** (Chase, Bank of America, etc.)
+- [ ] **Graphical interface** with Streamlit
+- [ ] **Automatic scheduling** with cron jobs
+- [ ] **Excel/CSV export**
+- [ ] **Email alerts** for anomalies
+- [ ] **Database integration**
 
-### 🐛 Signaler des Bugs
+### 🐛 Report Bugs
 
-1. **Vérifier** les problèmes existants
-2. **Créer** une issue détaillée
-3. **Inclure** logs et configuration (sans API keys!)
+1. **Check** existing issues
+2. **Create** a detailed issue
+3. **Include** logs and configuration (without API keys!)
 
-### 💡 Proposer des Améliorations
+### 💡 Suggest Improvements
 
-1. **Fork** le repository
-2. **Créer** une branche feature
-3. **Implémenter** l'amélioration
-4. **Tester** thoroughly
-5. **Créer** une pull request
+1. **Fork** the repository
+2. **Create** a feature branch
+3. **Implement** the improvement
+4. **Test** thoroughly
+5. **Create** a pull request
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est à des fins éducatives et de démonstration. Respectez les conditions d'utilisation de Skyvern et ParaBank.
+This project is for educational and demonstration purposes. Please respect Skyvern and ParaBank terms of use.
 
-## 🙏 Remerciements
+## 🙏 Acknowledgments
 
-- **Skyvern Team** pour la plateforme d'automatisation IA
-- **Parasoft** pour ParaBank, excellent environnement de test
-- **Communauté Python** pour les outils et bibliothèques
+- **Skyvern Team** for the AI automation platform
+- **Parasoft** for ParaBank, excellent test environment
+- **Python Community** for tools and libraries
 
 ---
 
-**🎯 Créé par [MedDhia] - Septembre 2025**
+**🎯 Created by [MedDhia] - September 2025**
 
-*POC d'automatisation bancaire avec intelligence artificielle*
+*Banking automation POC with artificial intelligence*
