@@ -1,55 +1,55 @@
-# ⚡ Guide de Démarrage Rapide
+# ⚡ Quick Start Guide
 
-**Commencez l'extraction bancaire IA en 5 minutes !**
+**Start AI banking extraction in 5 minutes!**
 
-## 🚀 Installation Express
+## 🚀 Express Installation
 
 ```bash
-# 1. Cloner et naviguer
-git clone https://github.com/votre-repo/ai-bank-skyvern-poc.git
+# 1. Clone and navigate
+git clone https://github.com/your-repo/ai-bank-skyvern-poc.git
 cd ai-bank-skyvern-poc
 
-# 2. Environnement virtuel
+# 2. Virtual environment
 python -m venv .venv
 .venv\Scripts\activate  # Windows
 # source .venv/bin/activate  # macOS/Linux
 
-# 3. Installer dépendances
+# 3. Install dependencies
 pip install -r requirements.txt
 
 # 4. Configuration
 cp .env.example .env
-# Éditer .env avec votre clé API Skyvern
+# Edit .env with your Skyvern API key
 ```
 
-## 🔑 Configuration Minimale
+## 🔑 Minimal Configuration
 
-Dans le fichier `.env` :
+In the `.env` file:
 ```properties
-# OBLIGATOIRE - Obtenir sur app.skyvern.com
-SKYVERN_API_KEY='votre_cle_api_ici'
+# REQUIRED - Get from app.skyvern.com
+SKYVERN_API_KEY='your_api_key_here'
 
-# ParaBank (déjà configuré)
+# ParaBank (already configured)
 TARGET_URL=https://parabank.parasoft.com/parabank/index.htm
 USERNAME='MedDhia'
 PASSWORD='MedDhia123'
 ```
 
-## ⚡ Tests Rapides
+## ⚡ Quick Tests
 
-### Test 1 : Validation Setup (30 secondes)
+### Test 1: Setup Validation (30 seconds)
 ```bash
 python simple_test.py
 ```
-**Attend** : ✅ Liste de 16 comptes bancaires
+**Expected**: ✅ List of 16 bank accounts
 
-### Test 2 : Extraction Complète (5 minutes)
+### Test 2: Complete Extraction (5 minutes)
 ```bash
 python enhanced_extractor.py
 ```
-**Attend** : ✅ Détails compte + 9 transactions
+**Expected**: ✅ Account details + 9 transactions
 
-## 📊 Résultats Attendus
+## 📊 Expected Results
 
 ### Simple Test
 ```json
@@ -57,14 +57,14 @@ python enhanced_extractor.py
   "accounts_summary": [
     {"account_number": "12345", "balance": "-$3400.00"},
     {"account_number": "12456", "balance": "-$189.55"},
-    // ... 14 autres comptes
+    // ... 14 other accounts
   ],
   "login_success": true,
   "page_title": "Accounts Overview"
 }
 ```
 
-### Extraction Complète
+### Complete Extraction
 ```json
 {
   "account_details": {
@@ -78,48 +78,48 @@ python enhanced_extractor.py
       "description": "Check # 1111",
       "amount": "+$300.00"
     }
-    // ... 8 autres transactions
+    // ... 8 other transactions
   ]
 }
 ```
 
-## 🔧 Résolution Problèmes Express
+## 🔧 Express Troubleshooting
 
-| Erreur | Solution Rapide |
-|--------|-----------------|
-| `No module named 'skyvern'` | Activer `.venv` puis `pip install skyvern` |
-| `Insufficient credit balance` | Ajouter crédits sur [app.skyvern.com/billing](https://app.skyvern.com/billing) |
-| `SKYVERN_API_KEY not found` | Vérifier `.env` - clé doit commencer par `eyJ` |
-| `Simple test YAML not found` | Fichier manquant - télécharger repository complet |
+| Error | Quick Solution |
+|-------|----------------|
+| `No module named 'skyvern'` | Activate `.venv` then `pip install skyvern` |
+| `Insufficient credit balance` | Add credits on [app.skyvern.com/billing](https://app.skyvern.com/billing) |
+| `SKYVERN_API_KEY not found` | Check `.env` - key must start with `eyJ` |
+| `Simple test YAML not found` | Missing file - download complete repository |
 
-## 🎯 Prochaines Étapes
+## 🎯 Next Steps
 
-1. **✅ Tests réussis ?** → Lire [README.md](README.md) complet
-2. **🔍 Comprendre le code ?** → Consulter [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md)
-3. **🚀 Personnaliser ?** → Modifier `recipes/enhanced_bank_extraction.yaml`
-4. **📊 Analyser données ?** → Examiner fichiers `outputs/*.json`
+1. **✅ Tests successful?** → Read complete [README.md](README.md)
+2. **🔍 Understand the code?** → Check [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md)
+3. **🚀 Customize?** → Modify `recipes/enhanced_bank_extraction.yaml`
+4. **📊 Analyze data?** → Examine `outputs/*.json` files
 
-## 💡 Commandes Utiles
+## 💡 Useful Commands
 
 ```bash
-# Test détection automatique comptes
+# Test automatic account detection
 python test_dynamic_detection.py
 
-# Extraction compte spécifique
+# Extract specific account
 python -c "
 from enhanced_extractor import EnhancedBankExtractor
 import asyncio
 async def main():
     extractor = EnhancedBankExtractor()
     result = await extractor.extract_account_details_and_transactions('12567')
-    print(f'Compte {result[\"target_account\"]} traité avec succès!')
+    print(f'Account {result[\"target_account\"]} processed successfully!')
 asyncio.run(main())
 "
 
-# Vérifier structure projet
+# Check project structure
 find . -name "*.py" -o -name "*.yaml" -o -name "*.json" | head -10
 ```
 
 ---
 
-**🎉 Vous êtes prêt ! En cas de problème, consultez la documentation complète.**
+**🎉 You're ready! In case of problems, check the complete documentation.**
