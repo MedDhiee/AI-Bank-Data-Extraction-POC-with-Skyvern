@@ -1,95 +1,95 @@
-# 🔧 Guide Technique Détaillé
+# 🔧 Detailed Technical Guide
 
-## 🏗️ Architecture du Système
+## 🏗️ System Architecture
 
-### 📋 Vue d'ensemble de l'Architecture
+### 📋 Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    AI Banking POC                           │
 ├─────────────────────────────────────────────────────────────┤
 │  Frontend (Python Scripts)                                 │
-│  ├── simple_test.py           (Tests rapides)              │
-│  ├── enhanced_extractor.py    (Extraction principale)      │
-│  └── test_dynamic_detection.py (Tests automatiques)        │
+│  ├── simple_test.py           (Quick tests)               │
+│  ├── enhanced_extractor.py    (Main extraction)           │
+│  └── test_dynamic_detection.py (Automatic tests)          │
 ├─────────────────────────────────────────────────────────────┤
 │  Business Logic                                            │
-│  ├── EnhancedBankExtractor    (Logique métier)             │
-│  ├── Account Detection        (Détection dynamique)        │
-│  └── Data Processing          (Traitement données)         │
+│  ├── EnhancedBankExtractor    (Business logic)            │
+│  ├── Account Detection        (Dynamic detection)         │
+│  └── Data Processing          (Data processing)           │
 ├─────────────────────────────────────────────────────────────┤
 │  Data Layer                                               │
-│  ├── Pydantic Schemas        (Validation)                  │
-│  ├── JSON Outputs            (Persistance)                 │
-│  └── YAML Workflows          (Configuration)               │
+│  ├── Pydantic Schemas        (Validation)                 │
+│  ├── JSON Outputs            (Persistence)                │
+│  └── YAML Workflows          (Configuration)              │
 ├─────────────────────────────────────────────────────────────┤
 │  External Services                                         │
-│  ├── Skyvern API             (Automatisation IA)           │
-│  ├── ParaBank Website        (Source de données)           │
-│  └── OpenAI API              (LLM pour Skyvern)            │
+│  ├── Skyvern API             (AI Automation)              │
+│  ├── ParaBank Website        (Data source)                │
+│  └── OpenAI API              (LLM for Skyvern)            │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 🔄 Flux de Données
+### 🔄 Data Flow
 
 ```mermaid
 graph TD
-    A[Utilisateur] --> B[enhanced_extractor.py]
-    B --> C[Chargement .env]
-    C --> D[Création client Skyvern]
-    D --> E[Détection compte dynamique]
-    E --> F[Chargement workflow YAML]
-    F --> G[Exécution Skyvern]
-    G --> H[Navigation ParaBank]
-    H --> I[Extraction données]
-    I --> J[Validation Pydantic]
-    J --> K[Sauvegarde JSON]
-    K --> L[Résultat utilisateur]
+    A[User] --> B[enhanced_extractor.py]
+    B --> C[Load .env]
+    C --> D[Create Skyvern client]
+    D --> E[Dynamic account detection]
+    E --> F[Load YAML workflow]
+    F --> G[Execute Skyvern]
+    G --> H[Navigate ParaBank]
+    H --> I[Extract data]
+    I --> J[Pydantic validation]
+    J --> K[Save JSON]
+    K --> L[User result]
 ```
 
-## 🧠 Composants Techniques
+## 🧠 Technical Components
 
-### 1. **EnhancedBankExtractor** (Composant Principal)
+### 1. **EnhancedBankExtractor** (Main Component)
 
 ```python
 class EnhancedBankExtractor:
     """
-    Composant principal d'extraction bancaire
+    Main banking extraction component
     
-    Responsabilités:
-    - Gestion de l'API Skyvern
-    - Détection dynamique des comptes
-    - Traitement des résultats
-    - Gestion des erreurs
+    Responsibilities:
+    - Skyvern API management
+    - Dynamic account detection
+    - Results processing
+    - Error handling
     """
     
-    # Méthodes principales
+    # Main methods
     async def extract_account_details_and_transactions(target_account=None)
     async def _get_first_available_account()
     async def _process_enhanced_results()
     async def extract_multiple_accounts()
 ```
 
-### 2. **Workflow YAML** (Configuration Skyvern)
+### 2. **YAML Workflow** (Skyvern Configuration)
 
 ```yaml
-# Structure du workflow enhanced_bank_extraction.yaml
+# Structure of enhanced_bank_extraction.yaml workflow
 title: Enhanced Bank Data Extraction
 workflow_definition:
-  parameters:           # Paramètres d'entrée
+  parameters:           # Input parameters
     - TARGET_URL
     - USERNAME  
     - PASSWORD
-    - TARGET_ACCOUNT   # Optionnel - détection auto si vide
+    - TARGET_ACCOUNT   # Optional - auto-detection if empty
   
-  blocks:              # Étapes d'exécution
-    - Login_To_Bank                    # Connexion
-    - Extract_First_Account_Details    # Détails compte
+  blocks:              # Execution steps
+    - Login_To_Bank                    # Login
+    - Extract_First_Account_Details    # Account details
     - Extract_Account_Transactions     # Transactions
-    - Return_To_Overview_For_Next_Account  # Navigation retour
+    - Return_To_Overview_For_Next_Account  # Return navigation
 ```
 
-### 3. **Schémas Pydantic** (Validation)
+### 3. **Pydantic Schemas** (Validation)
 
 ```python
 # utils/schemas.py
@@ -97,54 +97,54 @@ class Account(BaseModel):
     account_id: str
     account_type: Optional[str]
     balance: Optional[float]
-    # ... autres champs
+    # ... other fields
 
 class Transaction(BaseModel):
     account_id: str
     date: Optional[str]
     amount: Optional[float]
-    # ... autres champs
+    # ... other fields
 ```
 
-## 🔍 Algorithmes Clés
+## 🔍 Key Algorithms
 
-### 1. **Détection Dynamique des Comptes**
+### 1. **Dynamic Account Detection**
 
 ```python
 async def _get_first_available_account(self) -> str:
     """
-    Algorithme de détection dynamique:
+    Dynamic detection algorithm:
     
-    1. Essayer extraction rapide via simple_test
-    2. Parser les résultats pour obtenir liste comptes
-    3. Retourner le premier compte trouvé
-    4. En cas d'échec: fallback avec liste prédéfinie
-    5. Logging détaillé à chaque étape
+    1. Try quick extraction via simple_test
+    2. Parse results to get account list
+    3. Return first account found
+    4. On failure: fallback with predefined list
+    5. Detailed logging at each step
     """
     
-    # Étape 1: Tentative API
+    # Step 1: API attempt
     try:
         result = await simple_tester.test_simple_extraction()
         accounts = parse_accounts_from_result(result)
         return accounts[0] if accounts else fallback()
     
-    # Étape 2: Fallback intelligent
+    # Step 2: Intelligent fallback
     except Exception:
         return fallback_strategy()
 ```
 
-### 2. **Gestion des Erreurs avec Fallback**
+### 2. **Error Handling with Fallback**
 
 ```python
-# Stratégie de fallback multi-niveaux
+# Multi-level fallback strategy
 FALLBACK_ACCOUNTS = ["12345", "12456", "12567", "12678"]
 
 def get_fallback_account():
     """
-    Fallback intelligent:
-    - Essaie plusieurs comptes connus
-    - Logs pour traçabilité
-    - Retourne le premier qui pourrait fonctionner
+    Intelligent fallback:
+    - Try several known accounts
+    - Logs for traceability
+    - Return first that could work
     """
     for account in FALLBACK_ACCOUNTS:
         log.info(f"Trying fallback account: {account}")
@@ -298,17 +298,17 @@ async with APIRateLimiter():
     result = await skyvern_api_call()
 ```
 
-## 📊 Monitoring et Métriques
+## 📊 Monitoring and Metrics
 
-### 1. **KPIs Techniques**
+### 1. **Technical KPIs**
 
 ```python
-# Métriques clés à surveiller
+# Key metrics to monitor
 METRICS = {
-    'extraction_success_rate': 0.95,    # 95% de réussite
-    'avg_extraction_time': 300,         # 5 minutes moyenne
-    'api_error_rate': 0.05,             # 5% d'erreurs max
-    'data_quality_score': 0.98          # 98% de données valides
+    'extraction_success_rate': 0.95,    # 95% success rate
+    'avg_extraction_time': 300,         # 5 minutes average
+    'api_error_rate': 0.05,             # 5% max errors
+    'data_quality_score': 0.98          # 98% valid data
 }
 
 class MetricsCollector:
@@ -316,13 +316,13 @@ class MetricsCollector:
         self.metrics = defaultdict(list)
     
     def record_extraction(self, duration, success, errors):
-        """Enregistrement métriques par extraction"""
+        """Record metrics per extraction"""
         self.metrics['durations'].append(duration)
         self.metrics['successes'].append(success)
         self.metrics['errors'].extend(errors)
     
     def get_summary(self):
-        """Calcul KPIs agrégés"""
+        """Calculate aggregated KPIs"""
         return {
             'avg_duration': mean(self.metrics['durations']),
             'success_rate': sum(self.metrics['successes']) / len(self.metrics['successes']),
@@ -333,14 +333,14 @@ class MetricsCollector:
 ### 2. **Health Checks**
 
 ```python
-# Vérifications de santé système
+# System health checks
 async def health_check():
     """
-    Vérifications automatiques:
-    - Connectivité API Skyvern
-    - Disponibilité ParaBank
-    - Validité des credentials
-    - Espace disque pour outputs
+    Automatic checks:
+    - Skyvern API connectivity
+    - ParaBank availability
+    - Credentials validity
+    - Disk space for outputs
     """
     
     checks = {
@@ -353,28 +353,28 @@ async def health_check():
     return all(checks.values()), checks
 ```
 
-## 🧪 Tests et Validation
+## 🧪 Tests and Validation
 
-### 1. **Stratégie de Tests**
+### 1. **Testing Strategy**
 
 ```python
-# Tests unitaires
+# Unit tests
 class TestAccountDetection(unittest.TestCase):
     async def test_dynamic_account_detection(self):
-        """Test détection automatique compte"""
+        """Test automatic account detection"""
         extractor = EnhancedBankExtractor()
         account = await extractor._get_first_available_account()
         self.assertIsInstance(account, str)
         self.assertTrue(len(account) >= 5)
 
-# Tests d'intégration
+# Integration tests
 class TestFullWorkflow(unittest.TestCase):
     async def test_complete_extraction_flow(self):
-        """Test workflow complet end-to-end"""
+        """Test complete end-to-end workflow"""
         # Setup
         extractor = EnhancedBankExtractor()
         
-        # Exécution
+        # Execution
         result = await extractor.extract_account_details_and_transactions()
         
         # Validations
@@ -383,7 +383,7 @@ class TestFullWorkflow(unittest.TestCase):
         self.assertGreater(result['transactions_extracted'], 0)
 ```
 
-### 2. **Tests de Performance**
+### 2. **Performance Tests**
 
 ```python
 # Benchmarking
@@ -391,7 +391,7 @@ import time
 import asyncio
 
 async def benchmark_extraction():
-    """Mesure performance extraction"""
+    """Measure extraction performance"""
     start_time = time.time()
     
     extractor = EnhancedBankExtractor()
@@ -399,42 +399,42 @@ async def benchmark_extraction():
     
     duration = time.time() - start_time
     
-    # Métriques
+    # Metrics
     print(f"Duration: {duration:.2f}s")
     print(f"Accounts: {result.get('accounts_found', 0)}")
     print(f"Transactions: {result.get('transactions_extracted', 0)}")
     print(f"Performance: {result.get('transactions_extracted', 0) / duration:.2f} tx/s")
 ```
 
-## 🚀 Déploiement et Production
+## 🚀 Deployment and Production
 
-### 1. **Configuration Production**
+### 1. **Production Configuration**
 
 ```python
 # config/production.py
 PRODUCTION_CONFIG = {
-    'timeout_multiplier': 2,        # Timeouts plus longs
-    'retry_attempts': 3,            # Plus de tentatives
-    'logging_level': 'INFO',        # Moins verbose
-    'enable_monitoring': True,      # Monitoring activé
-    'rate_limit_requests': 2,       # Limite requêtes/seconde
-    'max_concurrent_extractions': 1 # Une seule extraction à la fois
+    'timeout_multiplier': 2,        # Longer timeouts
+    'retry_attempts': 3,            # More retry attempts
+    'logging_level': 'INFO',        # Less verbose
+    'enable_monitoring': True,      # Monitoring enabled
+    'rate_limit_requests': 2,       # Requests/second limit
+    'max_concurrent_extractions': 1 # One extraction at a time
 }
 ```
 
-### 2. **Monitoring Production**
+### 2. **Production Monitoring**
 
 ```python
-# Alertes automatiques
+# Automatic alerts
 class ProductionMonitor:
     async def monitor_extraction(self, extraction_func):
-        """Monitoring avec alertes"""
+        """Monitoring with alerts"""
         try:
             start = datetime.now()
             result = await extraction_func()
             duration = datetime.now() - start
             
-            # Alertes si performance dégradée
+            # Alerts if performance degraded
             if duration > timedelta(minutes=15):
                 await self.send_alert("Extraction taking too long")
             
@@ -448,26 +448,26 @@ class ProductionMonitor:
             raise
 ```
 
-## 📈 Optimisations Futures
+## 📈 Future Optimizations
 
-### 1. **Améliorations Architecture**
+### 1. **Architecture Improvements**
 
-- **Microservices** : Découper en services spécialisés
-- **Queue système** : Redis/RabbitMQ pour traitements asynchrones
-- **Base de données** : PostgreSQL pour persistance
-- **Cache distribué** : Redis pour cache multi-instance
+- **Microservices**: Split into specialized services
+- **Queue system**: Redis/RabbitMQ for asynchronous processing
+- **Database**: PostgreSQL for persistence
+- **Distributed cache**: Redis for multi-instance cache
 
-### 2. **Intelligence Artificielle**
+### 2. **Artificial Intelligence**
 
-- **ML Pipeline** : Prédiction anomalies transactions
-- **NLP avancé** : Classification automatique transactions
-- **Computer Vision** : OCR pour documents financiers
-- **Reinforcement Learning** : Optimisation navigation web
+- **ML Pipeline**: Transaction anomaly prediction
+- **Advanced NLP**: Automatic transaction classification
+- **Computer Vision**: OCR for financial documents
+- **Reinforcement Learning**: Web navigation optimization
 
-### 3. **Scalabilité**
+### 3. **Scalability**
 
 ```python
-# Architecture distribuée future
+# Future distributed architecture
 class DistributedExtractor:
     def __init__(self):
         self.task_queue = RedisQueue()
@@ -475,7 +475,7 @@ class DistributedExtractor:
         self.cache = RedisCache()
     
     async def submit_extraction_task(self, account_id):
-        """Soumission tâche à la queue"""
+        """Submit task to queue"""
         task_id = uuid.uuid4()
         await self.task_queue.put({
             'task_id': task_id,
@@ -485,10 +485,10 @@ class DistributedExtractor:
         return task_id
     
     async def get_extraction_result(self, task_id):
-        """Récupération résultat async"""
+        """Get async result"""
         return await self.result_store.get(task_id)
 ```
 
 ---
 
-*Documentation technique mise à jour - Septembre 2025*
+*Technical documentation updated - September 2025*
